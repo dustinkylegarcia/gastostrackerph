@@ -158,7 +158,7 @@ export default function Auth() {
             </div>
 
             {isLogin ? (
-              <Form {...loginForm}>
+              <Form {...loginForm} key="login">
                 <form onSubmit={loginForm.handleSubmit(handleLogin)} className="space-y-4">
                   <FormField
                     control={loginForm.control}
@@ -210,7 +210,7 @@ export default function Auth() {
                 </form>
               </Form>
             ) : (
-              <Form {...signupForm}>
+              <Form {...signupForm} key="signup">
                 <form onSubmit={signupForm.handleSubmit(handleSignup)} className="space-y-4">
                   <FormField
                     control={signupForm.control}
